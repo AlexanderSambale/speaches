@@ -5,10 +5,10 @@ services:
     extends:
       file: compose.yaml
       service: speaches
-    image: ghcr.io/speaches-ai/speaches:latest-cuda-12.6.3
+    image: ghcr.io/speaches-ai/speaches:cuda
     build:
       args:
-        BASE_IMAGE: ${BASE_IMAGE:-nvidia/cuda:13.0.2-cudnn-devel-ubuntu24.04}
+        BASE_IMAGE: ${BASE_IMAGE:-nvidia/cuda:12.9.1-cudnn-runtime-ubuntu24.04}
     volumes:
       - ./huggingface:/home/ubuntu/.cache/huggingface/hub
     devices:

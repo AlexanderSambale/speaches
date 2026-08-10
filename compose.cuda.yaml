@@ -10,6 +10,6 @@ services:
       args:
         BASE_IMAGE: ${BASE_IMAGE:-nvidia/cuda:12.9.1-cudnn-runtime-ubuntu24.04}
     volumes:
-      - ./huggingface:/home/ubuntu/.cache/huggingface/hub
+      - ~/.huggingface:/home/ubuntu/.cache/huggingface
     devices:
       - nvidia.com/gpu=all
